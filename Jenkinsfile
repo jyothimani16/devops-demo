@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'dockerhub-creds'
-        IMAGE_NAME = 'jyothimani16/devops-demo'
+        IMAGE_NAME = 'jyothimanis16/devops-demo'
     }
 
     stages {
