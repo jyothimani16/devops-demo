@@ -28,9 +28,15 @@ pipeline {
             }
         }
 
+	stage('Remove Old Container') {
+            steps {
+                sh 'docker rm -f devops-container || true'
+            }
+        }
+
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 5000:5000 $IMAGE_NAME'
+                sh 'docker run -d -p 5000:5000 --name devops-container $IMAGE_NAME'
             }
         }
 
